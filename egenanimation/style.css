@@ -1,0 +1,1378 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Chewy';
+}
+
+header {
+    width: 100vw;
+    height: 50px;
+    background-color: #47b859;
+}
+
+header h1 {
+    color: white;
+    font-family: 'Chewy';
+    text-transform: uppercase;
+}
+
+/****************************************/
+
+/*************     SCENE     *************/
+
+#scene {
+    width: 100vw;
+    height: 56.25vw;
+    position: relative;
+    overflow: hidden;
+}
+
+button {
+    padding: 5px;
+    margin: 10px 5px 10px 5px;
+    background-color: #e3e3e3;
+    box-shadow: none;
+    border: 0;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+button:focus {
+    outline: 0;
+    box-shadow: 0 0 3px #ddd;
+    border-radius: 3px;
+}
+
+/*********************************************/
+
+/********    TITEL SKÆRM   *********/
+
+#titel_container {
+    position: absolute;
+    z-index: 25;
+    background-color: #47b859;
+    border-radius: 5%;
+}
+
+#titel_sprite {
+    width: 50vw;
+    height: 25vw;
+}
+
+.titel_start_pos {
+    left: 25%;
+    top: -60%;
+}
+
+#titel_sprite h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Chewy', cursive;
+    font-size: 5vw;
+    margin-top: 10%;
+}
+
+#titel_sprite img {
+    position: absolute;
+    width: 10vw;
+    height: 9.6vw;
+    margin-left: -5vw;
+    margin-top: -1.6vw;
+    left: 50%;
+    top: 50%;
+    transition: 0.3s all ease-in-out;
+}
+
+#titel_sprite img:hover {
+    transform: scale(1.15);
+}
+
+.titel_ned {
+    animation: titel_ned_kf;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes titel_ned_kf {
+    0% {
+        left: 25%;
+        top: -60%;
+    }
+
+    30% {
+        left: 25%;
+        top: 25%;
+    }
+
+    65% {
+        left: 25%;
+        top: 20%;
+    }
+
+    100% {
+        left: 25%;
+        top: 20%;
+    }
+}
+
+.titel_slut_pos {
+    left: 25%;
+    top: -60%;
+    animation: titel_slut_kf;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+
+@keyframes titel_slut_kf {
+    0% {
+        left: 25%;
+        top: 20%;
+    }
+
+    30% {
+        left: 25%;
+        top: 25%;
+    }
+
+    100% {
+        left: 25%;
+        top: -60%;
+    }
+}
+
+.titel_cycle {
+    animation-name: titel_cycle_kf;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes titel_cycle_kf {
+    0% {
+        background-position: none;
+    }
+
+    100% {
+        background-position: none;
+    }
+}
+
+/*********************************************/
+
+/********    REPLAY SKÆRM   *********/
+
+#replay {
+    position: absolute;
+    z-index: 25;
+    width: 100%;
+    height: 100%;
+    background-color: #47b859;
+}
+
+.replay_start_pos {
+    left: 0;
+    bottom: -100%;
+}
+
+.replay_slut_pos {
+    animation: replay_titel_kf;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes replay_titel_kf {
+    0% {
+        left: 0;
+        bottom: -100%;
+    }
+
+
+    100% {
+        left: 0;
+        bottom: 0%;
+    }
+}
+
+#replay h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Chewy', cursive;
+    font-size: 12vw;
+    margin-top: 10%;
+}
+
+#replay img {
+    position: absolute;
+    width: 20vw;
+    height: 18.2vw;
+    margin-left: -10vw;
+    margin-top: -1.6vw;
+    left: 50%;
+    top: 50%;
+    transform: scale(0.7);
+    transition: all 0.5s ease;
+}
+
+#replay img:hover {
+    transform: scale(0.9);
+}
+
+/**************************************************/
+
+/***** BAGGRUND, FORGRUND & MELLEMGRUND  **********/
+
+#baggrund {
+    background-image: url(billeder/baggrund.svg);
+    background-size: cover;
+    width: 120%;
+    height: 120%;
+    top: -10%;
+    left: -4.5%;
+    position: absolute;
+
+    z-index: 1;
+}
+
+#forgrund {
+    background-image: url(billeder/forgrund.svg);
+    background-size: cover;
+    width: 100%;
+    height: 60%;
+    position: absolute;
+    background-color: none;
+    bottom: -18%;
+    z-index: 10;
+}
+
+#mellemgrund {
+    background-image: url(billeder/mellemgrund.svg);
+    background-size: cover;
+    width: 125%;
+    height: 115%;
+    position: absolute;
+    background-color: none;
+    top: 0;
+    left: -17%;
+    z-index: 5;
+}
+
+#mellemgrund_ekstra {
+    background-image: url(billeder/mellemgrund_ekstra.svg);
+    background-size: cover;
+    width: 102%;
+    height: 95%;
+    position: absolute;
+    background-color: none;
+    left: -6%;
+    top: -14%;
+    z-index: 4;
+}
+
+
+/***********************************************/
+
+/******************* SLIME GOD *******************/
+
+#slime_container {
+    position: absolute;
+    z-index: 9;
+}
+
+#slime_sprite {
+    background-image: url('billeder/god_spritesheet.svg');
+    width: 12vw;
+    height: 12vw;
+    background-size: 500% 400%;
+}
+
+.slime_start_pos {
+    left: -15%;
+    bottom: 30%;
+}
+
+.slime_move_right {
+    left: -15%;
+    bottom: 30%;
+    animation: slime_move_right_kf;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.41, .43, .69, 1);
+}
+
+.slime_walkcycle {
+    animation-name: slime_walkcycle_kf;
+    animation-duration: 0.45s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(5);
+    animation-direction: alternate;
+}
+
+@keyframes slime_walkcycle_kf {
+    0% {
+        background-position: 0% 0;
+    }
+
+    100% {
+        background-position: -500% 0;
+    }
+}
+
+@keyframes slime_move_right_kf {
+    0% {
+        left: -15%;
+        bottom: 27%;
+
+    }
+
+    100% {
+        left: 38%;
+        bottom: 35%;
+    }
+}
+
+/***********************************************/
+
+/******************* SLIME FALDER I LAVA *******************/
+
+.slime_lava_start_pos {
+    left: -15%;
+    bottom: 30%;
+}
+
+
+.slime_in_lava {
+    animation: slime_in_lava_kf 2s, slime_in_lava_move_kf 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    left: 38%;
+    bottom: 35%;
+}
+
+.slime_lava_cycle {
+    animation-name: slime_lava_cycle_kf;
+    animation-duration: 0.45s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(5);
+    animation-direction: alternate;
+}
+
+@keyframes slime_lava_cycle_kf {
+    0% {
+        background-position: 0% 0;
+    }
+
+    100% {
+        background-position: -500% 0;
+    }
+}
+
+@keyframes slime_in_lava_move_kf {
+    0% {
+        left: 38%;
+    }
+
+    100% {
+        left: 61%;
+    }
+}
+
+@keyframes slime_in_lava_kf {
+    0% {
+        bottom: 35%;
+
+    }
+
+    50% {
+        bottom: 45%;
+
+    }
+
+    100% {
+        bottom: -10%;
+    }
+}
+
+
+
+/***********************************************/
+
+/******************* Tankeboble 1 *******************/
+
+#boble_container {
+    position: absolute;
+    z-index: 10;
+}
+
+#boble_sprite {
+    background-image: url('billeder/boble_one.svg');
+    width: 15vw;
+    height: 15vw;
+    background-size: 300% 100%;
+}
+
+#boble_sprite h2 {
+    position: absolute;
+    color: #47b859;
+    font-size: 3vw;
+    top: 15%;
+    left: 25%;
+    opacity: 0;
+}
+
+.show_font {
+    animation-name: font_delay_kf;
+    animation-delay: 0.5s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 1;
+}
+
+@keyframes font_delay_kf {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.boble_start_pos {
+    display: none;
+    left: 15%;
+    bottom: 30%;
+}
+
+.boble_float {
+    display: block;
+    animation: boble_float_kf;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.boble_walkcycle {
+    animation-name: boble_walkcycle_kf;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(2);
+    animation-fill-mode: forwards;
+
+    transition: 0.3s all ease-in-out;
+}
+
+.boble_walkcycle:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+@keyframes boble_walkcycle_kf {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: -200% -100%;
+    }
+}
+
+@keyframes boble_float_kf {
+    0% {
+        left: 46%;
+        bottom: 51%;
+
+    }
+
+    100% {
+        left: 46%;
+        bottom: 54%;
+    }
+}
+
+/***********************************************/
+
+/******************* Tankeboble 2 *******************/
+
+#boble2_container {
+    position: absolute;
+    z-index: 10;
+}
+
+#boble2_sprite {
+    background-image: url('billeder/boble_two.svg');
+    width: 15vw;
+    height: 15vw;
+    background-size: 300% 100%;
+}
+
+
+.show_font2 {
+    animation-name: font_delay2_kf;
+    animation-delay: 0.5s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 1;
+}
+
+@keyframes font_delay2_kf {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#boble2_sprite h2 {
+    position: absolute;
+    color: #47b859;
+    font-size: 3vw;
+    top: 15%;
+    left: 25%;
+    opacity: 0;
+}
+
+.boble2_start_pos {
+    display: none;
+    left: 15%;
+    bottom: 30%;
+}
+
+.boble2_float {
+    display: block;
+    animation: boble2_float_kf;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.boble2_walkcycle {
+    animation-name: boble2_walkcycle_kf;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(2);
+    animation-fill-mode: forwards;
+    transform: scale(1.0);
+
+    transition: 0.3s all ease-in-out;
+}
+
+.boble2_walkcycle:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+@keyframes boble2_walkcycle_kf {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: -200% -100%;
+    }
+}
+
+@keyframes boble2_float_kf {
+    0% {
+        left: 29%;
+        bottom: 51%;
+
+    }
+
+    100% {
+        left: 29%;
+        bottom: 54%;
+    }
+}
+
+
+/***********************************************/
+
+/******************* SLIME RAMT AF ILD ***************/
+
+.slime_hit {
+    left: 38%;
+    bottom: 35%;
+    animation: slime_hit_kf;
+    animation-duration: 2s;
+    animation-delay: 3.25s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.slime_hitcycle {
+    animation-name: slime_hitcycle_kf;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes slime_hitcycle_kf {
+    0% {
+        transform: rotate(0deg) scaleX(1) skewX(20deg);
+    }
+
+    100% {
+        transform: rotate(540deg) scaleX(0.8) skewX(20deg);
+
+    }
+}
+
+@keyframes slime_hit_kf {
+    0% {
+        left: 38%;
+        bottom: 35%;
+    }
+
+    50% {
+        left: 53%;
+        bottom: 40%;
+    }
+
+    100% {
+        left: 55.5%;
+        bottom: -5%;
+    }
+}
+
+/************** SLIME HAPPY *************/
+
+/**************************************/
+
+.slime_happy_stand {
+    left: 38%;
+    bottom: 35%;
+}
+
+.slime_happy_cycle {
+    animation-name: happy_cycle_kf;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-timing-function: steps(3);
+    animation-iteration-count: 1;
+}
+
+@keyframes happy_cycle_kf {
+    0% {
+        background-position: 0% -100%;
+    }
+
+    100% {
+        background-position: -300% -100%;
+    }
+}
+
+
+/************** SLIME SCARED *************/
+
+/**************************************/
+
+.slime_scared_cycle {
+    animation-name: happy_scared_kf;
+    animation-duration: 0.7s;
+    animation-delay: 0.4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: steps(4);
+}
+
+@keyframes happy_scared_kf {
+    0% {
+        background-position: 0% -300%;
+    }
+
+    100% {
+        background-position: -400% -300%;
+    }
+}
+
+/************** SLIME JUMP *************/
+
+/**************************************/
+
+.slime_prejump {
+    left: 38%;
+    bottom: 35%;
+    animation: slime_prejump_kf;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    transform-origin: bottom center;
+}
+
+@keyframes slime_prejump_kf {
+    0% {
+        transform: scaleY(1) scaleX(1);
+    }
+
+    100% {
+        transform: scaleY(0.7) scaleX(1.3);
+    }
+}
+
+.slime_prejump_ready {
+    left: 38%;
+    bottom: 35%;
+    transform-origin: bottom center;
+    transform: scaleY(0.7) scaleX(1.3);
+
+    animation: slime_prejump_kf;
+    animation-duration: 0s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+/************** POWERBAR ************/
+
+/**************************************/
+
+#powerbar_container {
+    z-index: 14;
+    position: absolute;
+}
+
+.powerbar_start_pos {
+    top: -55%;
+    left: 20%;
+}
+
+.powerbar_ind {
+    top: 20%;
+    left: 20%;
+}
+
+#powerbar_sprite {
+    width: 18vw;
+    height: 18vw;
+    background-image: url(billeder/powerbar4.svg);
+    background-size: 800% 100%;
+}
+
+.powerbar_sprite1 {
+    background-position: -100% 0;
+}
+
+.powerbar_sprite2 {
+    background-position: -200% 0;
+}
+
+.powerbar_sprite3 {
+    background-position: -300% 0;
+}
+
+.powerbar_sprite4 {
+    background-position: -400% 0;
+}
+
+.powerbar_sprite5 {
+    background-position: -500% 0;
+}
+
+.powerbar_sprite6 {
+    background-position: -600% 0;
+}
+
+.powerbar_sprite7 {
+    background-position: -700% 0;
+}
+
+#btn_container {
+    z-index: 14;
+    position: absolute;
+    transition: all ease 0.2s;
+}
+
+.btn_start_pos {
+    left: 7%;
+    top: 105%
+}
+
+.btn_ind {
+    left: 24.9%;
+    top: 52%
+}
+
+#btn_container:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+#btn_sprite {
+    border-radius: 50%;
+    width: 8vw;
+    height: 8vw;
+    background-color: red;
+    background-image: url(billeder/spring.svg);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.btn_puls {
+    animation-name: btn_puls_kf;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    transform: scale(1);
+}
+
+@keyframes btn_puls_kf {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+
+/**************************************/
+
+.slime_jump {
+    left: 38%;
+    bottom: 35%;
+    animation: slime_jump_kf 2s, slime_jump_move_kf 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+
+.slime_jumpcycle {
+    animation-name: slime_jumpcycle_kf;
+    animation-duration: 0.45s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(5);
+    animation-direction: alternate;
+}
+
+@keyframes slime_jumpcycle_kf {
+    0% {
+        background-position: 0% 0;
+    }
+
+    100% {
+        background-position: -500% 0;
+    }
+}
+
+@keyframes slime_jump_move_kf {
+    0% {
+        left: 38%;
+    }
+
+    100% {
+        left: 73%;
+    }
+}
+
+@keyframes slime_jump_kf {
+    0% {
+        bottom: 35%;
+    }
+
+    50% {
+        bottom: 60%;
+    }
+    100% {
+        bottom: 40%;
+    }
+}
+
+
+/************** SLIME HAPPY AFTER JUMP *************/
+
+/**************************************/
+
+.slime_happy_jump {
+    left: 73%;
+    bottom: 40%;
+    animation: slime_happy_jump_kf;
+    animation-duration: 0.6s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+.slime_happy_jumpcycle {
+    animation-name: slime_happy_jumpcycle_kf;
+    animation-duration: 0.85s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(4);
+    animation-direction: alternate;
+}
+
+@keyframes slime_happy_jumpcycle_kf {
+    0% {
+        background-position: 0% -200%;
+    }
+
+    100% {
+        background-position: -400% -200%;
+    }
+}
+
+@keyframes slime_happy_jump_kf {
+    0% {
+        left: 73%;
+        bottom: 40%;
+
+    }
+
+    100% {
+        left: 73%;
+        bottom: 47%;
+    }
+}
+
+/************** Slime jumpOver *************/
+
+/**************************************/
+
+.slime_jumpover {
+    left: 38%;
+    bottom: 35%;
+    animation: slime_jumpover_kf 2s, slime_jumpover_move_kf 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+
+@keyframes slime_jumpover_kf {
+    0% {
+        left: 38%;
+    }
+
+    100% {
+        left: 73%;
+    }
+}
+
+@keyframes slime_jumpover_move_kf {
+    0% {
+        bottom: 35%;
+    }
+
+    50% {
+        bottom: 60%;
+    }
+    100% {
+        bottom: 40%;
+    }
+}
+
+.slime_jumpover_cycle {
+    animation-name: slime_jumpover_cycle_kf;
+    animation-duration: 0.45s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(5);
+    animation-direction: alternate;
+}
+
+@keyframes slime_jumpover_cycle_kf {
+    0% {
+        background-position: 0% 0;
+    }
+
+    100% {
+        background-position: -500% 0;
+    }
+}
+
+
+/************** SLIME OND *************/
+
+/**************************************/
+
+#evil_slime_container {
+    position: absolute;
+    z-index: 8;
+}
+
+#evil_slime_sprite {
+    background-image: url(billeder/ond_spritesheet.svg);
+    width: 25vw;
+    height: 25vw;
+    background-size: 700% 200%;
+}
+
+.evil_slime_start_pos {
+    left: -27%;
+    bottom: 25%;
+}
+
+.evil_slime_stand_pos {
+    left: 0%;
+    bottom: 25%;
+}
+
+.evil_slime_move_right {
+    animation: evil_slime_move_right_kf;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    left: -27%;
+    bottom: 25%;
+}
+
+.evil_slime_walkcycle {
+    animation-name: evil_slime_walkcycle_kf;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(5);
+}
+
+@keyframes evil_slime_walkcycle_kf {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: -500% 0%;
+    }
+}
+
+@keyframes evil_slime_move_right_kf {
+    0% {
+        left: -27%;
+        bottom: 25%;
+
+    }
+
+    100% {
+        left: 0%;
+        bottom: 25%;
+    }
+}
+
+/************** FIREBALL *************/
+
+/**************************************/
+
+#fireball_container {
+    position: absolute;
+    z-index: 9;
+}
+
+#fireball_sprite {
+    background-image: url(billeder/fireball.svg);
+    width: 15vw;
+    height: 15vw;
+    background-size: 500% 100%;
+}
+
+.fireball_start_pos {
+    left: 6%;
+    bottom: 38%;
+    opacity: 0;
+}
+
+.fireball_move_right {
+    animation: fireball_move_right_kf;
+    animation-duration: 2s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    left: -25%;
+    bottom: 25%;
+}
+
+.fireball_walkcycle {
+    animation-name: fireball_walkcycle_kf;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(5);
+}
+
+@keyframes fireball_walkcycle_kf {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: -500% 0%;
+    }
+}
+
+@keyframes fireball_move_right_kf {
+    0% {
+        opacity: 1;
+        left: 6%;
+        bottom: 38%;
+        transform: scale(0.05);
+    }
+
+    30% {
+        opacity: 1;
+        left: 8%;
+        bottom: 38%;
+        transform: scale(0.5);
+    }
+
+    80% {
+        opacity: 1;
+        transform: scale(1) scaleX(1) scaleY(1);
+    }
+
+    95% {
+        opacity: 1;
+        left: 35%;
+        bottom: 35%;
+        transform: scale(1) scaleX(1) scaleY(1);
+    }
+
+    100% {
+        opacity: 0;
+        left: 35%;
+        bottom: 35%;
+        transform: scaleX(0.8) scaleY(1.8);
+    }
+}
+
+/************** SLIME ATTACK *************/
+
+/**************************************/
+
+.evil_slime_attack {
+    animation-name: evil_slime_attack_kf;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: steps(6);
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes evil_slime_attack_kf {
+    0% {
+        background-position: 0% -100%;
+    }
+
+    100% {
+        background-position: -600% -100%;
+    }
+}
+
+
+/************** LYN *******************/
+
+/**************************************/
+
+#lyn_container {
+    position: absolute;
+    z-index: 3;
+}
+
+.lyn_start_pos {
+    left: 30%;
+    top: -1%;
+    opacity: 0;
+}
+
+#lyn_sprite {
+    background-image: url('billeder/lyn.svg');
+    background-size: 100% 100%;
+    width: 15vw;
+    height: 35.55vw;
+    opacity: 0.8;
+}
+
+.lyn_cycle {
+    animation: 5s linear lyn_cycle_kf;
+    animation-duration: infinite;
+    animation-iteration-count: 1;
+    opacity: 0;
+}
+
+@keyframes lyn_cycle_kf {
+    0% {
+        left: 38%;
+        opacity: 0;
+    }
+
+    9% {
+        left: 38%;
+        opacity: 0;
+    }
+
+    10% {
+        left: 38%;
+        opacity: 0.8;
+    }
+
+    18% {
+        left: 38%;
+        opacity: 0;
+    }
+
+    39% {
+        left: 20%;
+        opacity: 0;
+    }
+
+    40% {
+        left: 20%;
+        opacity: 0.8;
+    }
+
+    48% {
+        left: 20%;
+        opacity: 0;
+    }
+
+    70% {
+        left: 30%;
+        opacity: 0;
+    }
+
+    71% {
+        left: 30%;
+        opacity: 0.8;
+    }
+
+    75% {
+        left: 30%;
+        opacity: 0.8;
+    }
+
+    80% {
+        left: 30%;
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        left: 30%;
+    }
+}
+
+/************** SKYER *******************/
+
+/**************************************/
+
+#sky_container {
+    position: absolute;
+    left: 2%;
+    top: 2%;
+    z-index: 2;
+}
+
+#sky_sprite {
+    background-image: url(billeder/sky.svg);
+    background-size: cover;
+    width: 20vw;
+    height: 10.6vw;
+    opacity: 0.1;
+}
+
+#sky_container2 {
+    position: absolute;
+    left: 2%;
+    top: 2%;
+    z-index: 2;
+}
+
+#sky_sprite2 {
+    background-image: url(billeder/sky.svg);
+    background-size: cover;
+    width: 20vw;
+    height: 10.6vw;
+    opacity: 0.1;
+}
+
+.sky_move_right {
+    animation: sky_move_right_kf;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+.sky_move_right2 {
+    animation: sky_move_right2_kf;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+.sky_walkcycle {
+    animation-name: sky_walkcycle_kf;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes sky_walkcycle_kf {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+@keyframes sky_move_right_kf {
+    0% {
+        left: -10%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes sky_move_right2_kf {
+    0% {
+        top: 10%;
+        left: 100%;
+        transform: scale(0.6);
+    }
+
+    100% {
+        top: 10%;
+        left: 0%;
+        transform: scale(0.6);
+    }
+}
+
+.lava_start {
+    left: 45%;
+    top: 65%;
+}
+
+#lava {
+    position: absolute;
+    background-image: url('billeder/lava.svg');
+    background-size: 300% 100%;
+    width: 35vw;
+    height: 35vw;
+    z-index: 4;
+}
+
+.lava_float {
+    left: 45%;
+    top: 60%;
+    animation-name: lava_cycle_kf;
+    animation-duration: 0.9s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(3);
+}
+
+@keyframes lava_cycle_kf {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: -300%;
+    }
+}

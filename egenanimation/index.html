@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>02_03_04 - Mikkel Lehrmann</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/manifest.json">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#15b02e">
+    <link rel="shortcut icon" href="/favicon/favicon.ico">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet">
+</head>
+
+<body>
+    <div id="scene">
+
+        <!------>
+        <!-- Titelskærm -->
+
+        <div id="titel_container" class="titel_start_pos">
+            <div id="titel_sprite" class="titel_cycle">
+                <h1>DEN ANDEN SIDE</h1>
+                <a href="#" id="clickable"><img src="billeder/start.svg" alt="startlogo"></a>
+            </div>
+        </div>
+
+        <!------>
+        <!-- stilbilleder -->
+
+        <div id="baggrund"></div>
+        <div id="forgrund"></div>
+        <div id="mellemgrund"></div>
+        <div id="mellemgrund_ekstra"></div>
+
+        <!------>
+        <!-- Animerede elementer -->
+
+        <div id="lyn_container" class="lyn_start_pos">
+            <div id="lyn_sprite"></div>
+        </div>
+
+        <div id="slime_container" class="slime_start_pos">
+            <div id="slime_sprite" class=""></div>
+        </div>
+
+        <div id="powerbar_container" class="powerbar_start_pos">
+            <div id="powerbar_sprite" class=""></div>
+        </div>
+
+        <div id="btn_container" class="btn_start_pos">
+            <div id="btn_sprite" class=""></div>
+        </div>
+
+        <div id="evil_slime_container" class="evil_slime_start_pos">
+            <div id="evil_slime_sprite" class="btn_puls"></div>
+        </div>
+
+        <div id="fireball_container" class="fireball_start_pos">
+            <div id="fireball_sprite" class=""></div>
+        </div>
+
+        <div id="boble_container" class="boble_start_pos">
+            <div id="boble_sprite" class="">
+                <h2 id="textbob" class="">JUMP?</h2>
+            </div>
+        </div>
+
+        <div id="boble2_container" class="boble2_start_pos">
+            <div id="boble2_sprite" class="">
+                <h2 id="textbob2" class="">STAY?</h2>
+            </div>
+        </div>
+
+
+        <!------>
+        <!-- Altid kørende animationer -->
+
+        <div id="sky_container" class="sky_move_right">
+            <div id="sky_sprite" class="sky_walkcycle"></div>
+        </div>
+
+        <div id="sky_container2" class="sky_move_right2">
+            <div id="sky_sprite2" class="sky_walkcycle"></div>
+        </div>
+
+        <div id="lava" class="lava_float"></div>
+
+        <!------>
+        <!-- Replayskærm -->
+
+        <div id="replay" class="replay_start_pos">
+            <h1>PRØV IGEN?</h1>
+            <a href=""><img id="replay_btn" src="billeder/replay.svg" alt="replay"></a>
+        </div>
+
+
+    </div>
+
+
+    <!--- LYD --->
+
+    <audio id="baggrund_melodi" src="lyd/baggrund.mp3">
+       Your browser does not support the audio element.
+    </audio>
+    <audio id="lyn_lyd" src="lyd/lyn.mp3">
+       Your browser does not support the audio element.
+    </audio>
+    <audio id="slime_god_lyd" src="lyd/slime_god_lyd.mp3">
+       Your browser does not support the audio element.
+    </audio>
+    <audio id="slime_happy_lyd" src="lyd/slime_happy_lyd.mp3">
+       Your browser does not support the audio element.
+    </audio>
+    <audio id="evil_slime_stand_lyd" src="lyd/evil_slime_stand_lyd.mp3">
+       Your browser does not support the audio element.
+    </audio>
+    <audio id="fireball_lyd" src="lyd/fireball.mp3">
+       Your browser does not support the audio element.
+    </audio>
+    <audio id="slime_scream" src="lyd/slime_scream.mp3">
+       Your browser does not support the audio element.
+    </audio>
+    <audio id="slime_happy_melodi" src="lyd/happy.mp3">
+       Your browser does not support the audio element.
+    </audio>
+
+
+
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="scriptauto.js"></script>
+</body>
+
+</html>

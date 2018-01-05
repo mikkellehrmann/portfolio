@@ -1,0 +1,463 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    background-color: #e3e3d7;
+}
+
+
+/*** headers **/
+
+h1,
+h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 5px 0 5px 0;
+}
+
+h2,
+h4,
+h3,
+h5,
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    color: #17374b;
+    padding: 5px 15px 5px 15px;
+}
+
+h1 {
+    padding-left: 15px;
+    font-size: 2.5rem;
+    color: #e2691b;
+    border-bottom: 5px solid #f7f7ed;
+    border-top: 10px solid #f7f7ed;
+}
+
+h2 {
+    padding: 15px 15px 5px 15px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5em;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 1.1em;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+h4 {
+    font-size: 1em;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+h5 {
+    padding: 15px 15px 5px 15px;
+    font-size: 1.1rem;
+    font-weight: 900;
+}
+
+p {
+    font-weight: 400;
+    font-size: 1em;
+}
+
+#typografi h1 {
+    margin-bottom: 10px;
+}
+
+#komposition_farver h1 {
+    font-size: 1.8em;
+}
+
+#komposition_farver .column_narrow h2 {
+    padding-top: 5px;
+}
+
+.top_plads {
+    padding-top: 20px;
+}
+
+
+/************************* **********************/
+
+figure {
+    margin: 10px 15px 15px 15px;
+}
+
+figcaption {
+    font-family: 'Roboto', sans-serif;
+    color: #17374b;
+    font-weight: 400;
+    font-size: 1em;
+}
+
+header {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+header nav {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    float: right;
+    margin: 25px 25px 0 0;
+}
+
+header nav a {
+    text-align: right;
+    color: white;
+    text-decoration: none;
+    padding: 3px 0 0 0px;
+    display: block;
+}
+
+header nav a:hover {
+    color: #e2691b;
+}
+
+@media screen and (min-width: 675px) {
+    header {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+    header nav a {
+        display: inline-block;
+        padding: 0 0 0 5px;
+    }
+    .mindre {
+        width: 100%;
+    }
+    .typografi_content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .typografi_content .left {
+        flex-grow: 3;
+        flex-basis: 300px;
+    }
+    .typografi_content .right img {
+        width: calc(100% - 30px);
+    }
+    .typografi_content .right {
+        flex-grow: 4;
+        flex-basis: 100px;
+    }
+}
+
+footer {
+    padding: 15px;
+    color: #17374b;
+}
+
+.sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section {
+    margin: 0;
+    padding: 0;
+}
+
+section#splash {
+    border-top: none;
+    margin: 0;
+    padding: 0;
+}
+
+section#eksempler {
+    background-color: #17374b;
+}
+
+section#eksempler .column {
+    background-color: #e3e3d7;
+}
+
+section#eksempler h1 {
+    background-color: #e3e3d7;
+}
+
+.ikon {
+    position: absolute;
+    width: 90px;
+    height: auto;
+    margin: 20px;
+    z-index: 100;
+}
+
+#splash {
+    width: 100vw;
+    height: 167vw;
+    background-image: url(../splash/mobile_portrait.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+img {
+    width: 100%;
+}
+
+.column {
+    flex-grow: 1;
+    flex-basis: 300px;
+}
+
+.column_content {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    margin: 0px 20px 0 0;
+    border-bottom: 5px solid #f7f7ed;
+}
+
+.last {
+    margin: 0;
+}
+
+.top {
+    align-self: flex-start;
+}
+
+.bottom {
+    align-self: flex-end;
+}
+
+.column_wide {
+    padding: 0px;
+    flex-basis: 400px;
+    flex-grow: 3;
+}
+
+.column_narrow {
+    margin: 15px 20px 0 0;
+    flex-basis: 400px;
+    flex-grow: 1;
+}
+
+.colors {
+    flex-basis: 100px;
+    flex-grow: 0;
+    padding: 15px 0 0 15px;
+}
+
+.content {
+    padding: 0 0 0 20px;
+    flex-basis: 400px;
+    flex-grow: 4;
+}
+
+#komposition_farver .content {
+    padding: 0 0 0 0px;
+    flex-basis: 200px;
+    flex-grow: 4;
+}
+
+#links .content {
+    padding: 5px 0 20px 0;
+    width: 100px;
+}
+
+#links a {
+    color: #3a77a1;
+    text-decoration: underline;
+    margin-bottom: 25px;
+    font-style: normal;
+    width: 100px;
+    word-wrap: break-word;
+}
+
+#links a:hover {
+    color: #e2691b;
+}
+
+
+/******************* FARVER ***********************/
+
+.color1,
+.color2,
+.color3,
+.color4,
+.color5 {
+    margin-bottom: 15px;
+    width: 100px;
+    height: 100px;
+}
+
+.color1 {
+    background-color: #3D4975;
+}
+
+.color2 {
+    background-color: #798C66;
+}
+
+.color3 {
+    background-color: #D7B642;
+}
+
+.color4 {
+    background-color: #F4E4B2;
+}
+
+.color5 {
+    background-color: #291F13;
+}
+
+
+/********************** LANDSCAPE **************************/
+
+@media screen and (orientation: landscape) {
+    #splash {
+        width: 100vw;
+        height: 59.8vw;
+        background-image: url(../splash/mobile_landscape.jpg);
+    }
+    .top_plads {
+        padding-top: 10px;
+    }
+}
+
+@media screen and (min-width: 627px) and (orientation: landscape) {
+    #splash {
+        width: 100vw;
+        height: 75vw;
+        background-image: url(../splash/tablet_landscape.jpg);
+    }
+    #typografi .column_wide {
+        flex-basis: 300px;
+    }
+    #typografi .column_narrow {
+        flex-basis: 300px;
+        margin: 0;
+    }
+    #eksempler .column {
+        flex-basis: 100px;
+    }
+    .mindre2 {
+        width: 50%;
+    }
+    #ekstra .plads {
+        margin-top: 50px;
+    }
+}
+
+
+/*************** PORTRAIT ***************/
+
+@media screen and (min-width: 376px) and (orientation: portrait) {
+    #splash {
+        width: 100vw;
+        height: 133vw;
+        background-image: url(../splash/tablet_portrait.jpg);
+    }
+    .top_plads {
+        padding-top: 10px;
+    }
+    .mindre {
+        width: calc(100% - 30px);
+    }
+    #eksempler .column {
+        flex-basis: 300px;
+    }
+    #typografi .column_wide {
+        flex-basis: 300px;
+    }
+    #typografi .column_narrow {
+        flex-basis: 300px;
+        margin: 0;
+    }
+    #komposition_farver .column_wide {
+        flex-basis: 300px;
+    }
+    #komposition_farver .column_narrow {
+        flex-basis: 300px;
+        margin: 0;
+    }
+    #komposition_farver .column_narrow h2 {
+        margin-top: 10px;
+    }
+    #ekstra .plads {
+        margin-top: 10px;
+    }
+    #komposition_farver h1 {
+        font-size: 2.5em;
+    }
+    #komposition_farver figure {
+        max-width: 400px;
+    }
+}
+
+@media screen and (min-width: 600px) and (orientation: portrait) {
+    #eksempler .column {
+        flex-basis: 200px;
+    }
+}
+
+
+/*************** DESKTOP ***************/
+
+@media screen and (min-width: 1025px) {
+    #splash {
+        width: 100vw;
+        height: 56vw;
+        background-image: url(../splash/desktop.jpg);
+    }
+    #om figure {
+        float: right;
+        width: 60%;
+    }
+    #om,
+    #eksempler,
+    #typografi,
+    #komposition_farver,
+    #links,
+    #ekstra,
+    footer {
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+    .mindre {
+        width: 100%;
+    }
+    .typografi_content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .typografi_content .left {
+        flex-grow: 3;
+        flex-basis: 300px;
+    }
+    .typografi_content .right img {
+        width: calc(100% - 30px);
+    }
+    .typografi_content .right {
+        flex-grow: 4;
+        flex-basis: 100px;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1025px),
+(min-resolution: 192dpi) and (min-width: 1025px) {
+    #splash {
+        width: 100vw;
+        height: 56vw;
+        background-image: url(../splash/desktop_retina.jpg);
+    }
+}
