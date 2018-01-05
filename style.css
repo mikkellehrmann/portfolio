@@ -150,15 +150,13 @@ footer {
     width: 25px;
     height: 25px;
     background-size: 100%;
-    background-image: url(img/ikoner/home.svg);
-
-    opacity: 0.2;
+    background-image: url(img/ikoner/home_blue.svg);
+    opacity: 0.83;
 }
 
 .home_icon:hover {
     cursor: pointer;
-    background-image: url(img/ikoner/home_blue.svg);
-    opacity: 0.83;
+    opacity: 0.63;
 }
 
 .icon_active {
@@ -219,15 +217,15 @@ footer {
     right: 0;
     width: 28px;
     height: 28px;
-    opacity: 0.2;
-    background-image: url(img/ikoner/profile.svg);
+    opacity: 0.83;
+    background-image: url(img/ikoner/profile_blue.svg);
     background-size: 100%;
     background-repeat: no-repeat;
 }
 
 .profile_icon:hover {
     cursor: pointer;
-    opacity: 0.4;
+    opacity: 0.6;
 }
 
 .profile_white {
@@ -331,10 +329,13 @@ section#projects {
     width: 100%;
     height: 0%;
 }
+
 /*
 .project_overlay:hover h3 {
     color: blue;
-}*/
+}
+
+*/
 
 .project_overlay h3 {
     height: 100%;
