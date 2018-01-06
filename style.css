@@ -391,6 +391,29 @@ section#projects {
     width: 45%;
 }
 
+/** video **/
+
+.videocolumn {
+    margin-top: 0px;
+    margin-bottom: 150px;
+}
+
+.hs-responsive-embed-youtube iframe {
+    position: absolute;
+    width: 100%!important;
+    height: 100%!important;
+}
+
+.hs-responsive-embed-youtube {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 Aspect Ratio */
+    padding-top: 25px;
+}
+
+
+/** **/
+
 .column h3 {
     font-family: 'Barlow Semi Condensed', sans-serif;
     text-transform: uppercase;
