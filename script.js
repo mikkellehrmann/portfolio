@@ -16,6 +16,8 @@ $(document).ready(function () {
 });
 
 
+/** Brug af scroll **/
+
 $(window).scroll(function () {
     var scroll = $(window).scrollTop();
 
