@@ -1,0 +1,427 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'HelveticaNeue';
+    background-color: #E9ECED;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 4em;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    display: inline-block;
+    vertical-align: middle;
+    color: #E9ECED;
+    font-weight: 700;
+}
+
+/**** SECTION GRUPPEN ****/
+
+#personer {
+    position: relative;
+    width: 100vw;
+}
+
+.wrapper {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1600px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#person_container {
+    flex-basis: 250px;
+    justify-content: center;
+}
+
+#person_indhold {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.person {
+    align-self: center;
+    width: 10vw;
+    height: 10vw;
+    background-color: #f19638;
+    border-radius: 50%;
+    flex-grow: 1;
+    overflow: hidden;
+
+}
+
+.persontekst {
+    text-align: center;
+    flex-grow: 1;
+}
+
+/**** SECTION ANIMATION ****/
+
+#animation {
+    width: 100vw;
+    background-color: #89CCE5;
+    padding-top: 1vw;
+    padding-bottom: 5vw;
+    text-align: center;
+    color: #E9ECED;
+
+}
+
+#animation img {
+    width: auto;
+    height: 25vw;
+    padding: 20px;
+
+}
+
+/**** SECTION Historie ****/
+
+#historie {
+    padding: 10px;
+    background-color: #202532;
+    color: #E9ECED;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+#historie h2 {
+    flex-basis: 100vw;
+}
+
+
+.ide_tekst {
+    width: 50vw;
+    flex-grow: 1;
+    flex-basis: 500px;
+    padding: 20px;
+}
+
+.ide_billeder {
+    height: auto;
+    width: 50vw;
+    flex-grow: 1;
+    flex-basis: 500px;
+}
+
+.ide_billed_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+}
+
+.ide_billed_container img {
+    height: auto;
+    width: 100%;
+    padding: 5px;
+}
+
+/**** SECTION styletile ****/
+
+/**** SECTION storyboard ****/
+
+#storyboard {
+    background-color: #f4912d;
+    padding: 1vw;
+    color: #E9ECED;
+    text-align: center;
+}
+
+#storyboard img {
+    height: auto;
+    width: 50vw;
+    padding-bottom: 8vw;
+}
+
+#design {
+    padding: 1vw;
+    background-color: #202532;
+    color: #E9ECED;
+}
+
+#koncept {
+    text-align: center;
+}
+
+#koncept img {
+    width: auto;
+    height: 30vw;
+}
+
+#styletile {
+    text-align: center;
+}
+
+#styletile img {
+    width: auto;
+    height: 40vw;
+
+}
+
+#ads {
+    text-align: center;
+}
+
+#ads img {
+    width: auto;
+    height: 30vw;
+    padding: 1%;
+
+}
+
+#karakter {
+    text-align: center;
+}
+
+#karakter img {
+    width: auto;
+    height: 30vw;
+    padding: 1%;
+}
+
+#layoutdiagram {
+    background-color: #f4912d;
+    padding: 1vw;
+    color: #E9ECED;
+    text-align: center;
+}
+
+#layoutdiagram img {
+    width: auto;
+    height: 25vw;
+    padding: 20px;
+    text-align: center;
+}
+
+#sekvensdiagram {
+    padding: 1vw;
+    background-color: #202532;
+    color: #E9ECED;
+    text-align: center;
+}
+
+#sekvensdiagram img {
+    width: auto;
+    height: 25vw;
+    padding: 20px;
+
+}
+
+#assetliste {
+    background-color: #f4912d;
+    padding: 1vw;
+    color: #E9ECED;
+    text-align: center;
+
+}
+
+#assetliste img {
+    width: auto;
+    height: 25vw;
+    padding: 20px;
+
+}
+
+#dokumentation {
+    padding: 1vw;
+    background-color: #202532;
+    color: #E9ECED;
+}
+
+#fernisering {
+    background-color: #f4912d;
+    padding: 1vw;
+    color: #E9ECED;
+
+}
+
+#fernisering img {
+    width: auto;
+    height: 25vw;
+    padding: 20px;
+
+}
+
+#trello {
+    padding: 1vw;
+    background-color: #202532;
+    color: #E9ECED;
+    text-align: center;
+}
+
+#trello img {
+    width: auto;
+    height: 25vw;
+    padding: 20px;
+
+}
+
+
+#sections {
+    padding: 1vw;
+}
+
+/*** MENU ***/
+
+/* MenuToggle fra: https://stackoverflow.com/questions/45514582/hamburger-menu-fixed-on-bottom-right-bootstrap */
+
+#menu a {
+    text-decoration: none;
+    color: #232323;
+    display: block;
+    vertical-align: middle;
+
+    transition: color 0.3s ease;
+}
+
+#menu a:hover {
+    color: #f4912d;
+}
+
+#menuToggle {
+    display: block;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    top: 50px;
+    left: 50px;
+
+    z-index: 1;
+
+    -webkit-user-select: none;
+    user-select: none;
+    background-color: #f4912d;
+    border-radius: 50%;
+}
+
+#menuToggle input {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    cursor: pointer;
+
+    opacity: 0;
+    z-index: 2;
+}
+
+#menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-left: 8px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: white;
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    opacity 0.55s ease;
+}
+
+.first {
+    margin-top: 14px;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+
+#menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #282f43;
+}
+
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+
+#menu {
+    position: fixed;
+    width: 300px;
+    height: 100vh;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+
+    background: #ededed;
+    list-style-type: none;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+    padding: 10px 0;
+    font-size: 22px;
+}
+
+
+#menuToggle input:checked ~ ul {
+    transform: none;
+}
+
+.testdok {
+    width: 100%;
+    text-align: center;
+}
+
+footer {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #202532;
+    color: #e9eced;
+    text-align: center;
+
+    padding: 10px;
+}
