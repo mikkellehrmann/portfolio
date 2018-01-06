@@ -1,0 +1,551 @@
+/*********** Overordnet ***********/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', 'Arial';
+    color: black;
+}
+
+.reddit {
+    background-color: #fafafa;
+    border: 1px solid #369;
+    border-radius: 7px;
+    padding: 5px 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 1.0769230769230769em;
+    font-weight: 400;
+    color: #222222;
+    max-width: 60em;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: blue;
+}
+
+footer {
+    margin: 0 auto;
+    max-width: 1080px;
+    height: 90px;
+    text-align: center;
+    line-height: 90px;
+    font-size: 1em;
+}
+
+#logo {
+    margin: 35px auto 0px auto;
+    background-image: url(img/logohvid.svg);
+    background-size: 100% 100%;
+    width: 150px;
+    height: 150px;
+    top: 0;
+    right: 0;
+}
+
+#logo:hover {
+    background-image: url(img/logoblaa.svg);
+}
+
+section {
+    padding: 0 20px 0 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.8em;
+    text-transform: uppercase;
+
+}
+
+.boxh2 {
+    margin: 0 auto 0px auto;
+    padding: 1px 0px 1px 0px;
+    max-width: 1080px;
+
+    background-color: #eee;
+}
+
+h2 {
+    font-size: 1.8em;
+    text-indent: 25px;
+    color: black;
+    width: 100%;
+}
+
+h3 {
+    font-size: 1.2em;
+    color: black;
+}
+
+h4 {
+    margin: 0 0 10px 0;
+    color: black;
+}
+
+p {
+    line-height: 1.4em;
+}
+
+ul {
+    margin-right: 20px;
+}
+
+li {
+    line-height: 1.4em;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1080px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+/********* Sections ***********/
+
+/*
+#empathize h2 {
+    border-top: 6px solid #F9EAA4;
+}
+
+#define h2 {
+    border-top: 6px solid #AEBFCD;
+}
+
+#ideate h2 {
+    border-top: 6px solid #D47778;
+}
+
+#prototype h2 {
+    border-top: 6px solid #2C3562;
+}
+
+#test h2 {
+    border-top: 6px solid #599EA1;
+}
+
+#design h2 {
+    border-top: 6px solid #F9EAA4;
+}
+
+#endeligide h2 {
+    border-top: 6px solid #AEBFCD;
+}
+
+#presentation h2 {
+    border-top: 6px solid #D47778;
+}
+*/
+
+/*********** Gruppe ***********/
+
+#group .column {
+    flex-basis: 320px;
+    flex-grow: 1;
+    padding-bottom: 20px;
+}
+
+.person {
+    display: flex;
+}
+
+.personbillede {}
+
+.personbillede img {
+    width: 60px;
+    margin: 6px 0 6px 0;
+    border-radius: 50%;
+}
+
+.persontekst {}
+
+.persontekst p {
+    line-height: 72px;
+    font-size: 1.2em;
+    padding: 0 0 0 15px;
+    margin: 0;
+}
+
+.link {
+    display: flex;
+}
+
+.linkbillede img {
+    width: 50px;
+    margin: 6px 0 6px 0;
+}
+
+.linktekst p {
+    line-height: 62px;
+    font-size: 1.2em;
+    padding: 0 0 0 15px;
+    margin: 0;
+}
+
+
+/*********** Ide ***********/
+
+#ideate .column {
+    flex-basis: 1080px;
+    flex-grow: 1;
+    margin: 0 0 20px 0;
+}
+
+.ide {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.ide_indhold {
+    flex-grow: 1;
+    flex-basis: 360px;
+    margin-bottom: 20px;
+}
+
+.ide_indhold_img {
+    flex-grow: 1;
+    flex-basis: 450 px;
+    margin-bottom: 20px;
+}
+
+.ide_indhold a {
+    color: blue;
+    text-decoration: underline;
+}
+
+.ide_indhold a:hover {
+    color: black;
+}
+
+.ide_indhold img {
+    width: 100%;
+}
+
+.ide_indhold p {
+    padding-right: 30px;
+    line-height: 1.4;
+}
+
+.luft {
+    padding-top: 20px;
+}
+
+
+/*********** Scrum ***********/
+
+.arrow {
+    position: absolute;
+    margin-top: -60px;
+    margin-left: 20px;
+    width: 35px;
+}
+
+.scrumcontainer {
+    max-width: 1080px;
+    margin: 0 auto 20px auto;
+
+    border-top: 85px solid #eee;
+}
+
+.videocontainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dag {
+    flex-basis: 520px;
+    flex-grow: 1;
+}
+
+.dag video {
+    width: 530px;
+    height: 397px;
+}
+
+.first {
+    margin-right: 20px;
+}
+
+
+/*********** Media screen ***********/
+
+@media screen and (max-width: 1080px) {
+    .scrumcontainer {
+        max-width: 1080px;
+        margin: 0 auto;
+
+        border-top: 1px solid #ccc;
+    }
+
+    .videocontainer {
+        display: flex;
+        flex-wrap: wrap;
+        width: 540px;
+        margin: 0 auto;
+    }
+
+    .dag {
+        flex-basis: 520px;
+        flex-grow: 1;
+    }
+
+    .dag video {
+        width: 540px;
+        height: 405px;
+    }
+
+    .first {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 584px) {
+    .videocontainer {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .dag video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+/********* Emphathize *********/
+
+/********* Experience map *********/
+
+.experience img {
+    max-width: 90%;
+}
+
+.experience .wrapper {
+    max-width: 1080px;
+}
+
+.experience a {
+    line-height: 1.5em;
+    text-decoration: underline;
+}
+
+.experience a:hover {
+    cursor: pointer;
+}
+
+.experience a > div {
+    display: none;
+}
+
+.experience a:hover > div {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    margin-left: 150px;
+    margin-top: -15px;
+}
+
+#empathize .container {
+    margin-bottom: 20px;
+}
+
+
+/********* Collapse Interview ********/
+
+.collapse-list {
+    margin: 20px 0 0 0;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 0px;
+}
+
+.collapse-open {
+    display: none;
+}
+
+.collapse-painel {
+    visibility: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height .1s,
+    visibility .3s,
+    opacity .3s;
+}
+
+.collapse-open:checked ~ .collapse-painel {
+    max-height: 100%;
+    opacity: 100;
+    visibility: visible
+}
+
+.collapse-list li {
+    margin: 0;
+    padding: 0;
+}
+
+label {
+    font-size: 1.1em;
+}
+
+.collapse-list .collapse-btn {
+    border-top: 1px solid #e0e0e0;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 0;
+    color: black;
+    font-weight: normal;
+    padding: 15px 0px 15px 0px;
+    transition: background-color .2s ease;
+}
+
+.collapse-list .collapse-btn:hover {
+    color: blue;
+}
+
+.collapse-open ~ .collapse-btn:before {
+    content: "▾";
+    float: right;
+}
+
+.collapse-open:checked ~ .collapse-btn:before {
+    content: "▾";
+    transform: rotate(180deg);
+}
+
+.collapse-list .collapse-inner {
+    padding: 10px 20px 20px 20px;
+    background-color: #f3f3f3;
+}
+
+.collapse-inner p {
+    margin: 20 0 0 0;
+    padding: 0;
+}
+
+
+/********** Test af prototype ********/
+
+#test a {
+    color: blue;
+    text-decoration: underline;
+}
+
+.hs-responsive-embed-youtube iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.hs-responsive-embed-youtube {
+    position: relative;
+    padding-bottom: 56.25%;
+}
+
+#test .wrapper {
+    max-width: 1080px;
+    margin: 20px auto;
+}
+
+#usability .wrapper {
+    max-width: 1080px;
+    margin: 20px auto;
+}
+
+.ikon {
+    border-radius: 25px;
+}
+
+
+/********* Menu ***********/
+
+.topnav {
+    margin: 0 auto;
+    width: 1080px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.active {
+    background-color: white;
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+@media screen and (max-width: 1080px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+
+    .topnav {
+
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+.styletile {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.styletile img {
+    width: 100%;
+}
+
+#design a {
+    color: blue;
+    text-decoration: underline;
+}
